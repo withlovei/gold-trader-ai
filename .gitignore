@@ -1,0 +1,44 @@
+# ---- Runtime data: account state, journal, candles, models, backups, logs (never commit) ----
+data/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+runtime*.json
+*.log
+*.err
+
+# ---- Secrets / environment ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+secrets/
+credentials*.json
+
+# ---- Python ----
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# ---- Local research / editor / OS ----
+.claude/settings.local.json
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+scratchpad/
+research-data/
+*.corrupt-*.json
+
+# Local PC cleanup helper, not part of the project
+scripts/pc-check-clean.ps1

@@ -1,0 +1,12 @@
+# GoldTrader - Python 3.13 on Windows (MetaTrader5 and Windows DPAPI are Windows-only).
+# Versions below are the ones the system is developed and tested with.
+fastapi>=0.116
+uvicorn>=0.35
+pydantic>=2.11
+MetaTrader5>=5.0.50
+numpy>=2.0
+scipy>=1.14
+scikit-learn>=1.5
+lightgbm>=4.6
+xgboost>=2.1
+hmmlearn>=0.3.3
