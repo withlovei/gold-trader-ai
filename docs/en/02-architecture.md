@@ -102,4 +102,4 @@ optional. Research found no reliable edge from the direction models; the signal 
 | add / tune an agent | `services/api/methods/`, `agents.py`, `EXTRA_BOOKS` in `live.py` |
 | change risk rules | `live._risk_blocks`, `settings_store.py` |
 | understand the backtest | `services/api/backtest.py` |
-| change the UI | `mockup/index.html` |
+| change the UI | `mockup/index.html`, `mockup/js/`, `mockup/css/`; English text in `js/i18n-en.js` |

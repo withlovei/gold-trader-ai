@@ -80,7 +80,7 @@ Contributor / AI-assistant guide: [CLAUDE.md](CLAUDE.md).
 ```
 services/api/        FastAPI app, live trading loop, agents, backtester, journal, meeting
 services/api/methods/ research methods (one module per agent) + base framework
-mockup/index.html    the whole dashboard (single page, Vietnamese UI)
+mockup/                index.html + css/ + js/ (dashboard; Vietnamese and English UI)
 scripts/             start.bat / start.ps1, history download
 tests/               regression tests (fake MetaTrader fed with real history)
 docs/                documentation (en / vi)
@@ -92,3 +92,7 @@ data/                runtime data (git-ignored): app.db, candles, models, backup
 Agent names (Raschke, Seykota, Connors, Darvas, …) are only labels borrowed from well-known
 traders to describe each method's style. This project is **not affiliated with, endorsed by, or
 derived from the work of** any of those people.
+
+## License
+
+[MIT](LICENSE). Research code, no warranty; see the disclaimer above.

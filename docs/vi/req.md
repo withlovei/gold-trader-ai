@@ -102,7 +102,7 @@ Chú giải: ✅ đã làm · 🟡 một phần · ❌ chưa xây
 | Tổng quan giao dịch, phòng làm việc trực quan, thẻ agent, sổ lệnh, biểu đồ, rủi ro, kiểm thử, mô hình, cài đặt | ✅ |
 | Công tắc tiền thật/nghiên cứu, hộp thoại cuộc họp, nhật ký theo từng cuộc họp, sao | ✅ |
 | Vỏ desktop Tauri, React/TypeScript | ❌ (trang HTML thuần) |
-| Đa ngôn ngữ | 🟡 giao diện chỉ tiếng Việt; tài liệu có tiếng Anh + tiếng Việt |
+| Đa ngôn ngữ | ✅ giao diện Việt/Anh (chọn ở thanh trên, `?lang=en`); tài liệu Anh + Việt. Văn bản do backend/Claude sinh ra chỉ dịch theo cụm đã biết |
 
 ### Vận hành
 | Yêu cầu | Trạng thái |

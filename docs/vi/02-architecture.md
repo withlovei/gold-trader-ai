@@ -103,4 +103,4 @@ hay tăng khối lượng.
 | thêm / chỉnh một agent | `services/api/methods/`, `agents.py`, `EXTRA_BOOKS` trong `live.py` |
 | đổi luật rủi ro | `live._risk_blocks`, `settings_store.py` |
 | hiểu backtest | `services/api/backtest.py` |
-| đổi giao diện | `mockup/index.html` |
+| đổi giao diện | `mockup/index.html`, `mockup/js/`, `mockup/css/`; tiếng Anh ở `js/i18n-en.js` |

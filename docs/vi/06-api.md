@@ -54,7 +54,7 @@ Lỗi trả về dạng `{"detail": ...}` hoặc `{"ok": false, "message": ...}`
 
 ## Tĩnh
 
-`GET /` trả `mockup/index.html`.
+`GET /` trả `mockup/index.html`; `/js/*` và `/css/*` trả script và style của giao diện.
 
 ## Ví dụ
 

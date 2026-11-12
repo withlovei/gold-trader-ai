@@ -54,7 +54,7 @@ JSON. Error responses use `{"detail": ...}` or `{"ok": false, "message": ...}`.
 
 ## Static
 
-`GET /` serves `mockup/index.html`.
+`GET /` serves `mockup/index.html`; `/js/*` and `/css/*` serve the UI scripts and styles.
 
 ## Example
 

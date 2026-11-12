@@ -7,6 +7,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from services.api.backtest import latest_backtest, run_backtest, run_compare
@@ -19,7 +20,17 @@ from services.api.notify import read_telegram, save_telegram, send_test
 from services.api.settings_store import read_risk, read_settings, save_risk
 from services.api.trainer import latest_report, train_now
 
-MOCKUP = Path(__file__).resolve().parents[2] / "mockup" / "index.html"
+MOCKUP_DIR = Path(__file__).resolve().parents[2] / "mockup"
+MOCKUP = MOCKUP_DIR / "index.html"
+
+
+class _NoStore(StaticFiles):
+    """Static UI files, never cached (the daily meeting or a developer may edit them)."""
+
+    async def get_response(self, path, scope):
+        response = await super().get_response(path, scope)
+        response.headers["Cache-Control"] = "no-store"
+        return response
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
@@ -33,6 +44,8 @@ async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
 
 
 app = FastAPI(title="AI Gold Trader", lifespan=lifespan)
+for _folder in ("js", "css"):
+    app.mount("/" + _folder, _NoStore(directory=MOCKUP_DIR / _folder), name="ui-" + _folder)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://127.0.0.1:8765", "http://localhost:8765"],

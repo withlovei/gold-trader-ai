@@ -7,7 +7,7 @@ Guidance for Claude Code (and other AI assistants / contributors) working in thi
 GoldTrader AI: a multi-agent automated trading desk for XAUUSD on MetaTrader 5 (Windows only).
 16 rule-based agents trade under a head of desk (coordinator). A daily meeting calls the Claude CLI
 to decide who trades real money and to improve agent code. The single-page dashboard lives in
-`mockup/index.html` (Vietnamese UI). Full docs: `docs/en/` and `docs/vi/`. Start with
+`mockup/` (index.html + `css/` + `js/`; UI in Vietnamese and English). Full docs: `docs/en/` and `docs/vi/`. Start with
 `docs/en/02-architecture.md`.
 
 ## Commands
@@ -60,7 +60,9 @@ functions, Vietnamese user-facing strings, English identifiers and comments).
 - `services/api/notify.py` — Telegram (short order/close messages).
 - `services/api/settings_store.py`, `secrets.py` — SQLite settings; MT5 password and Telegram
   token encrypted with Windows DPAPI.
-- `mockup/index.html` — whole UI; the office canvas is the `OfficeGame` IIFE.
+- `mockup/index.html` — page markup only; `mockup/css/app.css`; `mockup/js/NN-*.js` are plain scripts loaded in order
+  (shared global scope; `11-office.js` holds the `OfficeGame` IIFE). `js/i18n.js` + `js/i18n-en.js`: UI source text is
+  Vietnamese, English comes from a phrase dictionary applied to the DOM (`?lang=en`, header selector); canvas text uses `t()`.
 
 ## Rules that matter
 
@@ -99,5 +101,5 @@ touch your real `data/`. `tests/test_meeting.py` temporarily edits and restores
   walk-forward (`docs/en/07-backtest-and-research.md`), store results in `methods.TESTED`.
 - **Change a risk rule:** `live._risk_blocks` / `_coordinator_blocks`, mirror it in
   `backtest._simulate` when it affects results, extend tests.
-- **UI change:** edit `mockup/index.html`; keep confirmations in the `<dialog>` helpers
+- **UI change:** edit `mockup/index.html` / `mockup/js/*.js`; add English phrases for new Vietnamese text to `js/i18n-en.js`; keep confirmations in the `<dialog>` helpers
   (`confirmDialog` / `noticeDialog`) — no `alert()` / `confirm()`.

@@ -80,7 +80,7 @@ Hướng dẫn cho người đóng góp / trợ lý AI: [CLAUDE.md](CLAUDE.md).
 ```
 services/api/         ứng dụng FastAPI, vòng giao dịch thật, agent, backtest, sổ lệnh, cuộc họp
 services/api/methods/ các phương pháp nghiên cứu (mỗi agent một module) + khung chung
-mockup/index.html     toàn bộ giao diện (một trang, tiếng Việt)
+mockup/               index.html + css/ + js/ (giao diện; tiếng Việt và tiếng Anh)
 scripts/              start.bat / start.ps1, tải lịch sử nến
 tests/                test hồi quy (MetaTrader giả cấp bằng lịch sử thật)
 docs/                 tài liệu (en / vi)
@@ -92,3 +92,7 @@ data/                 dữ liệu chạy (git bỏ qua): app.db, nến, mô hìn
 Tên agent (Raschke, Seykota, Connors, Darvas, …) chỉ là nhãn mượn từ các nhà giao dịch nổi tiếng
 để mô tả phong cách của phương pháp. Dự án này **không liên kết, không được bảo trợ và không phái
 sinh từ công trình của** bất kỳ ai trong số đó.
+
+## Giấy phép
+
+[MIT](LICENSE). Mã nghiên cứu, không bảo hành; xem phần miễn trừ ở trên.
