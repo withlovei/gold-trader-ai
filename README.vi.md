@@ -37,6 +37,26 @@ tiến.
 - Bí mật (mật khẩu MT5, token Telegram) được mã hóa bằng Windows DPAPI, không rời khỏi máy; thư mục
   dữ liệu bị git bỏ qua.
 
+## Ảnh chụp màn hình
+
+Bảng điều khiển chạy cục bộ trên trình duyệt (tiếng Việt hoặc tiếng Anh, đổi ở thanh trên cùng). Ảnh lấy từ tài khoản demo.
+
+**Phòng giao dịch**: trưởng phòng, bàn giấy tiền thật và phòng nghiên cứu, theo thời gian thực.
+
+![Phòng giao dịch](docs/images/vi-floor.png)
+
+**Phương pháp từng agent** (ảnh giao diện tiếng Anh): điều kiện vào lệnh, quy trình năm bước, kết quả backtest theo năm.
+
+![Phương pháp](docs/images/en-method.png)
+
+**Backtest** (giao diện tiếng Anh): mô phỏng đúng mã thật, có chênh lệch giá và phí qua đêm.
+
+![Backtest](docs/images/en-backtest.png)
+
+**Sổ lệnh** (giao diện tiếng Anh): mọi lệnh thật kèm giá khớp, trượt giá, lý do thoát.
+
+![Sổ lệnh](docs/images/en-journal.png)
+
 ## Yêu cầu
 
 - Windows 10/11 (gói Python `MetaTrader5` và DPAPI chỉ chạy trên Windows)

@@ -36,6 +36,26 @@ money and who goes back to paper trading, and optionally improve an agent's sour
 - Secrets (MT5 password, Telegram token) are encrypted with Windows DPAPI and never leave the
   machine; the data folder is git-ignored.
 
+## Screenshots
+
+The dashboard runs locally in your browser (English or Vietnamese, switch in the top bar). Screenshots are from a demo account.
+
+**Trading floor**: the head of desk, the real-money desk and the research floor, live.
+
+![Trading floor](docs/images/en-floor.png)
+
+**Each agent's method**: entry conditions, the five-step pipeline (method, head of desk, risk gates, Claude, order), and backtest results per year.
+
+![Agent methods](docs/images/en-method.png)
+
+**Backtest**: a live-code replica with spread and swap; per-candle decisions for every agent.
+
+![Backtest](docs/images/en-backtest.png)
+
+**Order book**: every real order with fill price, slippage, exit reason and the result against the backtest.
+
+![Order book](docs/images/en-journal.png)
+
 ## Requirements
 
 - Windows 10/11 (the `MetaTrader5` Python package and DPAPI are Windows-only)

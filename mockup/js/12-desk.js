@@ -21,6 +21,10 @@ document.getElementById("office-view-toggle").addEventListener("click", () => {
   setOfficeView(document.getElementById("office-floor").hidden);
 });
 try { if (window.localStorage.getItem("goldtrader-office-view") === "game") setOfficeView(true); } catch (_error) { /* ignore */ }
+if (new URLSearchParams(window.location.search).get("view") === "floor") { // ?view=floor (used for screenshots)
+  setOfficeView(true);
+  window.setTimeout(() => document.getElementById("office-floor").scrollIntoView(), 3000);
+}
 const FAMILY_NAMES = { trend: "Xu hướng", breakout: "Phá vùng", reversal: "Đảo chiều" };
 function labBadge(agent) {
   if (agent.stage === "draft") return '<span class="badge badge-off">Chưa triển khai</span>';
